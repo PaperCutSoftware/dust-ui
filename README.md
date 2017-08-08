@@ -1,8 +1,29 @@
-# Device Usage Tracker UI
+# DUST: Device Usage Tracker UI
 
-> Made on PaperCut [Constructival 2016][1]
+DUST is a tool to track the usage of a fleet of devices in a shared environment. 
+
+With DUST, you can:
+ 
+* Add new devices, providing descriptive information on them, such:
+  * hostname
+  * brand
+  * model
+  * credentials
+  * photo
+  * ip
+  * nickname
+  * and more...
+* Claim a device as a user to let others know which device is in use.
+* Integrate a Slack bot with a Slack channel for group communication and convenient commands 
+  (like */claim &lt;device&gt;*). 
+
+> Made for PaperCut [Constructival 2016][1]
 
 ## Build Setup
+
+Pre-requisites:
+
+* [Node.js](https://nodejs.org/)
 
 ``` bash
 # install dependencies
