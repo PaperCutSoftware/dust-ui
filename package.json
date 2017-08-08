@@ -1,7 +1,7 @@
 {
   "name": "dust-ui",
-  "version": "1.8.2",
-  "description": "Device Usage Tracker - UI",
+  "version": "1.0.0",
+  "description": "DUST: Device Usage Tracker UI",
   "homepage": "https://www.papercut.com",
   "license": "MIT",
   "private": true,
