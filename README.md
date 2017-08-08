@@ -19,6 +19,37 @@ With DUST, you can:
 
 > Made for PaperCut [Constructival 2016][1]
 
+## Configuration
+
+Add your own `config/prod.env.js` based on `config/prod.env.js.dist`.
+
+### Authentication
+
+DUST uses Google OAuth for authentication and authorisation. To begin,
+[create a Google API Console project and client ID](https://developers.google.com/identity/sign-in/web/devconsole-project).
+
+For development, only the `GOOGLE_CLIENT_ID` is required to enable authentication.
+This may be used for both production and development environments.
+
+The optional `AUTH_DOMAIN` may be configured to restrict users to a Google Apps domain.
+
+### Production API
+
+The `API_*` config keys let you specify the details of your production [DUST API](https://github.com/PaperCutSoftware/dust-api). For example
+
+``` javascript
+module.exports = {
+  // ...
+  API_SCHEME: '"https"',
+  API_HOST: '"example.com"',
+  API_BASE_PATH: '"/api"',
+  API_PORT: '"443"',
+  // ...
+}
+```
+
+> Note: Due to restrictions in [Webpack's DefinePlugin](https://webpack.js.org/plugins/define-plugin/), configuration string values must have nested quotes or use `JSON.stringify('string-value')`.
+
 ## Build Setup
 
 Pre-requisites:
