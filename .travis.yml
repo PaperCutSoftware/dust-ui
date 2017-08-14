@@ -1,0 +1,12 @@
+language: node_js
+node_js: 
+  - "node"
+
+sudo: false
+
+cache:
+  directories:
+    - "node_modules"
+
+script:
+  - npm run unit # Travis has no desktop environment so cannot run e2e in Chrome
