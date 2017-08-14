@@ -1,8 +1,8 @@
-module.exports = {
+var merge = require('webpack-merge')
+var devEnv = require('./dev.env')
+
+module.exports = merge(devEnv, {
   NODE_ENV: '"testing"',
   GOOGLE_CLIENT_ID: '"test-google-client-id"',
-  AUTH_DOMAIN: '"example.com"',
-  API_HOST: '"example.com"',
-  API_SCHEME: '"http"',
-  API_PORT: '80'
-}
+  AUTH_DOMAIN: '"example.com"'
+})
