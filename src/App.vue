@@ -26,7 +26,7 @@
           <p class="md-subhead"><strong>D</strong>evice <strong>US</strong>age <strong>T</strong>racker</p>
         </div>
       </md-toolbar>
-      <md-list>
+      <md-list v-if="isAuthenticated">
         <md-list-item @click.native="openCreateDialog" id="createBtn">
           <md-icon>add_circle</md-icon>
           <span>Create new device</span>
@@ -70,7 +70,7 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex'
+  import { mapState, mapGetters } from 'vuex'
   import Auth from './components/Auth.vue'
   import AuthControl from './components/AuthControl.vue'
   import DeviceForm from './components/DeviceForm.vue'
@@ -85,7 +85,8 @@
       title () {
         return this.$route.meta.title
       },
-      ...mapState(['errors'])
+      ...mapState(['errors']),
+      ...mapGetters(['isAuthenticated'])
     },
     methods: {
       home () {
